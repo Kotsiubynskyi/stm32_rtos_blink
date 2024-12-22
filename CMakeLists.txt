@@ -6,6 +6,12 @@ project(blink LANGUAGES C ASM CXX)
 
 add_executable (${PROJECT_NAME}
     src/main.cpp
+    src/freertos/tasks.c
+    src/freertos/queue.c
+    src/freertos/list.c
+    src/freertos/portasm.c
+    src/freertos/port.c
+    src/freertos/heap_4.c
     STM32CubeG0/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c
     STM32CubeG0/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c
     STM32CubeG0/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c
@@ -14,12 +20,6 @@ add_executable (${PROJECT_NAME}
     STM32CubeG0/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c
     STM32CubeG0/Drivers/CMSIS/Device/ST/STM32G0xx/Source/Templates/system_stm32g0xx.c
     STM32CubeG0/Drivers/CMSIS/Device/ST/STM32G0xx/Source/Templates/gcc/startup_stm32g030xx.s
-    src/freertos/tasks.c
-    src/freertos/queue.c
-    src/freertos/list.c
-    src/freertos/portasm.c
-    src/freertos/port.c
-    src/freertos/heap_4.c
 	)
 
 target_include_directories (${PROJECT_NAME} PRIVATE

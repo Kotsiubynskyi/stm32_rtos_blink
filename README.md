@@ -9,7 +9,7 @@ Instructions written for Ubuntu (Debian) of simple blink project for STM32G0F6P6
     ```
 1. Important: current repository uses submodules so please clone the project ***recursively***:
     ```bash
-    git clone --recursive https://github.com/Kotsiubynskyi/stm32_g0_blink_cmake.git blink
+    git clone --recursive https://github.com/Kotsiubynskyi/stm32_rtos_blink.git blink
     ```
 1. Generate build files:
     ```bash
