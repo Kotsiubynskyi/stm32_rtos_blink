@@ -49,7 +49,7 @@ void blink(void *pvParameters) {
   for (;;) {
     // Blink LED2 or do other processing
     HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
-    vTaskDelay(pdMS_TO_TICKS(500));
+    vTaskDelay(pdMS_TO_TICKS(1000));
   }
 }
 
