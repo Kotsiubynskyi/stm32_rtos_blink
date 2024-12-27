@@ -1,6 +1,7 @@
 #include "stm32g030xx.h"
 #include "stm32g0xx_hal.h"
 #include "stm32g0xx_hal_gpio.h"
+#include "system_stm32g0xx.h"
 
 #include <FreeRTOS.h>
 #include <task.h>
@@ -13,7 +14,26 @@ void blink(void *pvParameters);
 int main() {
   HAL_Init();
   SystemClock_Config();
+  SystemCoreClockUpdate();
   GPIO_PA4_Init();
+  if (SystemCoreClock == 160000UL) {
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
+    HAL_Delay(100);
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
+    HAL_Delay(100);
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
+    HAL_Delay(100);
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
+    HAL_Delay(100);
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
+    HAL_Delay(100);
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
+    HAL_Delay(100);
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
+    HAL_Delay(100);
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
+    HAL_Delay(100);
+  }
 
   xTaskCreate(emptyTask,                // Task function
               "Task 1",                 // Task name (for debugging)
