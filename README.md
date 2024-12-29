@@ -5,7 +5,7 @@ Instructions written for Ubuntu (Debian) of simple blink project for STM32G0F6P6
 1. Install needed ARM development toolchain and other utilities:
     ```bash
     sudo apt update
-    sudo apt install -y cmake git ninja-build gcc-arm-none-eabi stlink-tools
+    sudo apt install -y cmake git usbutils ninja-build gcc-arm-none-eabi stlink-tools
     ```
 1. Important: current repository uses submodules so please clone the project ***recursively***:
     ```bash
