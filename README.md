@@ -24,7 +24,7 @@ Instructions written for Ubuntu (Debian) of simple blink project for STM32G0F6P6
     ```
 1. Insert ST-LINK programmer USB stick and make sure it's visible by OS:
     ```bash
-    lsusb|grep ST-LINK
+    lsusb|grep STMicroelectronics
     ```
 1. Upload built firmware to MCU:
     ```bash
